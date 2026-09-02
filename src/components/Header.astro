@@ -1,0 +1,105 @@
+---
+const nav = [
+  { label: 'Hair Care', href: '/hair-care' },
+  { label: 'Skin Care', href: '/skin-care' },
+  { label: 'Body Care', href: '/body-care' },
+  { label: 'Reviews', href: '/reviews' },
+  { label: 'Comparisons', href: '/comparisons' },
+  { label: 'About', href: '/about' },
+];
+---
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="/" class="logo">TIRENA</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" id="nav-toggle">
+      Menu
+    </button>
+    <nav aria-label="Primary" id="primary-nav">
+      <ul>
+        {nav.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const nav = document.getElementById('primary-nav');
+  toggle?.addEventListener('click', () => {
+    const isOpen = nav?.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(!!isOpen));
+  });
+</script>
+
+<style>
+  .site-header {
+    border-bottom: 1px solid var(--line);
+    background: var(--bg);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .logo {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  nav ul {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav a {
+    text-decoration: none;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  nav a:hover { color: var(--sage-deep); }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 8px 14px;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    color: var(--ink);
+    cursor: pointer;
+  }
+
+  @media (max-width: 760px) {
+    .nav-toggle { display: inline-block; }
+    nav ul {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      padding: 12px 28px 20px;
+    }
+    nav.open ul { display: flex; }
+    nav { position: relative; }
+    .header-inner { position: relative; }
+    nav a { display: block; padding: 8px 0; }
+  }
+</style>

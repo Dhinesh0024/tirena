@@ -1,0 +1,58 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  image?: string;
+  category?: string;
+}
+const { title, description, href, image, category } = Astro.props;
+---
+<a class="article-card" href={href}>
+  <div class="thumb" style={image ? `background-image:url(${image})` : ''}>
+    {!image && <span class="placeholder">TIRENA</span>}
+  </div>
+  <div class="body">
+    {category && <p class="cat">{category}</p>}
+    <h3>{title}</h3>
+    <p class="desc">{description}</p>
+  </div>
+</a>
+
+<style>
+  .article-card {
+    display: block;
+    text-decoration: none;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: border-color 0.15s ease;
+  }
+  .article-card:hover { border-color: var(--sage); }
+  .thumb {
+    height: 170px;
+    background: var(--bg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--line);
+  }
+  .placeholder {
+    font-family: var(--serif);
+    color: var(--line);
+    font-size: 1.4rem;
+  }
+  .body { padding: 20px 22px 24px; }
+  .cat {
+    font-size: 0.78rem;
+    color: var(--sage-deep);
+    font-weight: 600;
+    margin: 0 0 6px;
+    text-transform: capitalize;
+  }
+  .body h3 { font-size: 1.1rem; margin-bottom: 8px; color: var(--ink); }
+  .desc { font-size: 0.9rem; margin: 0; }
+</style>

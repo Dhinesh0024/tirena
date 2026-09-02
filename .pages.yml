@@ -1,0 +1,37 @@
+content:
+  - name: articles
+    label: Articles
+    type: collection
+    path: src/content/articles
+    format: yaml-frontmatter
+    view:
+      fields: [title, category, publishDate, draft]
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: description
+        label: Description (shows on cards and in search)
+        type: text
+      - name: category
+        label: Category
+        type: select
+        options:
+          values: [hair-care, skin-care, body-care, reviews, comparisons]
+      - name: publishDate
+        label: Publish Date
+        type: date
+      - name: image
+        label: Featured Image
+        type: image
+      - name: draft
+        label: Draft (hide from live site)
+        type: boolean
+        default: false
+      - name: body
+        label: Body
+        type: rich-text
+
+media:
+  input: public/uploads
+  output: /uploads

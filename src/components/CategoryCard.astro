@@ -1,0 +1,24 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+}
+const { title, description, href } = Astro.props;
+---
+<div class="cat-card">
+  <h3>{title}</h3>
+  <p>{description}</p>
+  <a class="muted-link" href={href}>Explore {title} &rarr;</a>
+</div>
+
+<style>
+  .cat-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--sage);
+    padding: 28px 26px;
+    border-radius: var(--radius);
+  }
+  .cat-card p { font-size: 0.95rem; }
+</style>

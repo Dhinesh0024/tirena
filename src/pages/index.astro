@@ -1,0 +1,191 @@
+---
+import Base from '../layouts/Base.astro';
+import CategoryCard from '../components/CategoryCard.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+const allArticles = await getCollection('articles', ({ data }) => !data.draft);
+const latest = allArticles
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+  .slice(0, 6);
+---
+<Base>
+  <!-- HERO -->
+  <section class="section hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <h1>Personal care, clearly.</h1>
+        <p class="lead">
+          Practical, research-aware guidance to help you understand personal care,
+          choose products with confidence, and build routines that make sense for you.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/hair-care">Explore Hair Care</a>
+          <a class="btn btn-secondary" href="/skin-care">Explore Skin Care</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPLORE PERSONAL CARE -->
+  <section class="section">
+    <div class="wrap">
+      <span class="eyebrow-mark"></span>
+      <h2>Explore personal care</h2>
+      <p>Start with the area you want to understand better.</p>
+      <div class="grid-3" style="margin-top: 40px;">
+        <CategoryCard
+          title="Hair Care"
+          description="Understand your hair, scalp, ingredients, products, and everyday routines."
+          href="/hair-care"
+        />
+        <CategoryCard
+          title="Skin Care"
+          description="Learn how to build sensible skincare routines and understand the products you use."
+          href="/skin-care"
+        />
+        <CategoryCard
+          title="Body Care"
+          description="Practical guidance for everyday body care, hygiene, grooming, and fragrance."
+          href="/body-care"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- START HERE -->
+  <section class="section start-here">
+    <div class="wrap">
+      <div class="start-card">
+        <span class="eyebrow-mark"></span>
+        <h2>Start here</h2>
+        <p>New to personal care? Start with the fundamentals before you spend money on products.</p>
+        <p class="start-desc">
+          Learn the foundations of hair care, skincare, product selection, and building
+          a routine that works for you.
+        </p>
+        <!-- Add href once the beginner's guide article is published -->
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST FROM TIRENA -->
+  <section class="section">
+    <div class="wrap">
+      <span class="eyebrow-mark"></span>
+      <h2>Latest from TIRENA</h2>
+      <p>New guides, explainers, reviews, and comparisons.</p>
+      {latest.length > 0 ? (
+        <div class="grid-3" style="margin-top: 40px;">
+          {latest.map((article) => (
+            <ArticleCard
+              title={article.data.title}
+              description={article.data.description}
+              href={`/articles/${article.slug}`}
+              image={article.data.image}
+              category={article.data.category.replace('-', ' ')}
+            />
+          ))}
+        </div>
+      ) : (
+        <p class="empty-state">No articles published yet — the first ones will appear here automatically once you publish through the CMS.</p>
+      )}
+    </div>
+  </section>
+
+  <!-- MAKE A BETTER CHOICE -->
+  <section class="section">
+    <div class="wrap">
+      <span class="eyebrow-mark"></span>
+      <h2>Make a better choice</h2>
+      <p>In-depth reviews and side-by-side comparisons to help you spend smarter.</p>
+      <div class="grid-2" style="margin-top: 40px;">
+        <div class="card">
+          <h3>Reviews</h3>
+          <p>A closer look at products, ingredients, strengths, limitations, and who they may suit.</p>
+          <a class="btn btn-clay" href="/reviews">Explore Reviews</a>
+        </div>
+        <div class="card">
+          <h3>Comparisons</h3>
+          <p>Side-by-side breakdowns to help you understand the differences before you choose.</p>
+          <a class="btn btn-clay" href="/comparisons">Explore Comparisons</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY TIRENA -->
+  <section class="section">
+    <div class="wrap">
+      <span class="eyebrow-mark"></span>
+      <h2>Why TIRENA?</h2>
+      <p>Personal care can be confusing. We aim to make it easier to understand.</p>
+      <div class="grid-3" style="margin-top: 40px;">
+        <div>
+          <h3>Clear</h3>
+          <p>We explain personal care without unnecessary jargon or confusing hype.</p>
+        </div>
+        <div>
+          <h3>Practical</h3>
+          <p>We focus on information that helps you make better everyday decisions.</p>
+        </div>
+        <div>
+          <h3>Evidence-aware</h3>
+          <p>We separate useful information from exaggerated claims and unsupported promises.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about-cta">
+    <div class="wrap about-inner">
+      <div>
+        <h2>About TIRENA</h2>
+        <p>
+          TIRENA is a personal-care publication built to help you understand what you're
+          using, why it matters, and how to make more informed choices for your everyday routine.
+        </p>
+      </div>
+      <a class="btn btn-secondary" href="/about">Learn about TIRENA</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero { padding-top: 88px; padding-bottom: 88px; }
+  .hero-inner { max-width: 720px; }
+  .hero-copy .lead { font-size: 1.15rem; max-width: 52ch; }
+  .hero-actions { display: flex; gap: 14px; margin-top: 8px; flex-wrap: wrap; }
+
+  .start-here .start-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 44px;
+    max-width: 720px;
+  }
+  .start-desc { font-size: 0.95rem; }
+
+  .empty-state {
+    margin-top: 32px;
+    padding: 28px;
+    border: 1px dashed var(--line);
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+  }
+
+  .about-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .about-inner > div { max-width: 560px; }
+
+  @media (max-width: 640px) {
+    .hero { padding-top: 56px; padding-bottom: 56px; }
+    .start-here .start-card { padding: 30px; }
+  }
+</style>

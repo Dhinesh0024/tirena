@@ -1,0 +1,52 @@
+---
+import ArticleCard from './ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+interface Props {
+  category: 'hair-care' | 'skin-care' | 'body-care' | 'reviews' | 'comparisons';
+  title: string;
+  intro: string;
+}
+const { category, title, intro } = Astro.props;
+
+const articles = (await getCollection('articles', ({ data }) => !data.draft && data.category === category))
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+---
+<section class="section" style="padding-top: 60px;">
+  <div class="wrap">
+    <span class="eyebrow-mark"></span>
+    <h1>{title}</h1>
+    <p style="max-width: 60ch;">{intro}</p>
+  </div>
+</section>
+
+<section class="section" style="border-top: none; padding-top: 0;">
+  <div class="wrap">
+    {articles.length > 0 ? (
+      <div class="grid-3">
+        {articles.map((article) => (
+          <ArticleCard
+            title={article.data.title}
+            description={article.data.description}
+            href={`/articles/${article.slug}`}
+            image={article.data.image}
+          />
+        ))}
+      </div>
+    ) : (
+      <p class="empty-state">
+        Nothing published in {title} yet — new articles will appear here automatically
+        as soon as they're saved through the CMS.
+      </p>
+    )}
+  </div>
+</section>
+
+<style>
+  .empty-state {
+    padding: 28px;
+    border: 1px dashed var(--line);
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+  }
+</style>

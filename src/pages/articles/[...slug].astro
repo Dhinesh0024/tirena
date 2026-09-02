@@ -1,0 +1,54 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles', ({ data }) => !data.draft);
+  return articles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await article.render();
+const categoryHref = `/${article.data.category}`;
+const categoryLabel = article.data.category.replace('-', ' ');
+---
+<Base title={article.data.title} description={article.data.description} image={article.data.image}>
+  <article class="section article" style="padding-top: 48px;">
+    <div class="wrap" style="max-width: 720px;">
+      <p class="breadcrumb">
+        <a href="/">TIRENA</a> &rsaquo; <a href={categoryHref}>{categoryLabel}</a>
+      </p>
+      {article.data.image && (
+        <img class="cover" src={article.data.image} alt={article.data.title} />
+      )}
+      <h1>{article.data.title}</h1>
+      <p class="dek">{article.data.description}</p>
+      <div class="prose">
+        <Content />
+      </div>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .breadcrumb {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    text-transform: capitalize;
+  }
+  .breadcrumb a { text-decoration: none; color: var(--sage-deep); }
+  .cover {
+    width: 100%;
+    border-radius: var(--radius);
+    margin: 20px 0 8px;
+    display: block;
+  }
+  .dek { font-size: 1.05rem; color: var(--ink-soft); }
+  .prose :global(h2) { margin-top: 2em; }
+  .prose :global(p) { max-width: none; }
+  .prose :global(a) { color: var(--sage-deep); text-decoration-color: var(--line); }
+  .prose :global(img) { width: 100%; border-radius: var(--radius); }
+</style>

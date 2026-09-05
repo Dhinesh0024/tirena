@@ -35,3 +35,11 @@ INCI (International Nomenclature of Cosmetic Ingredients) is the standardized na
 3. **Bottom:** preservatives, fragrance, and trace ingredients under 1%
 
 This isn't about memorizing every ingredient — it's about knowing where to look to tell a real formula from a marketing story.
+
+### Seeing it in practice
+
+*This section contains an affiliate link — if you buy through it, TIRENA may earn a small commission at no extra cost to you.*
+
+Take **[Deconstruct's 10% Vitamin C Serum](https://link.amazon/B0d1BPQw4)** as an example of a label that actually holds up. Its Vitamin C derivative (3-O Ethyl Ascorbic Acid) sits at position #2 in the ingredient list — right after water — which is exactly where you'd expect a genuinely high-concentration active to be. It also includes a second form, L-Ascorbic Acid, further down the list as a supporting addition, plus ferulic acid near the bottom as a stabilizing antioxidant — a normal, appropriate position for an ingredient that's effective even in smaller amounts.
+
+This is what it looks like when a front-of-bottle claim matches the back-of-bottle reality: the hero ingredient earns its position, rather than just its name on the label.

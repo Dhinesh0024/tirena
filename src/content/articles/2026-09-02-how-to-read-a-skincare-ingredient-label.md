@@ -4,6 +4,7 @@ description: INCI names, concentration order, and how to spot when a "hero
   ingredient" is really just for marketing.
 category: skin-care
 publishDate: 2026-09-02
+image: /uploads/Minimal Skincare Product Set with Blank Packaging.jpg
 draft: false
 ---
 Every skincare product legally has to list its ingredients in one specific order — and once you know how to read it, you can tell more from the back of the bottle than from any marketing claim on the front.

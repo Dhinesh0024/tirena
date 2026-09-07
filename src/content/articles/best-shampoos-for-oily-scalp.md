@@ -4,6 +4,8 @@ description: What actually causes an oily scalp, and which shampoo ingredients
   help — without over-stripping your hair.
 category: hair-care
 publishDate: 2026-09-01
+image: /uploads/Which is the best shampoo for hair type that ensures proper care
+  and growth.jpg
 draft: false
 ---
 An oily scalp isn't just about washing more. It usually comes down to one (or more) of three things: overactive sebaceous glands, product or styling buildup, or a scalp microbiome imbalance that makes oil feel worse than it is. The right shampoo depends on which of these is actually driving it for you — which is why "clarifying" and "volumizing" shampoos alone often don't fix it.

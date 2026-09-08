@@ -5,7 +5,7 @@ description: You don't need 10 products. Here's why cleanser, moisturizer, and
   one.
 category: skin-care
 publishDate: 2026-09-03
-image: /uploads/Pink skin care essentials_.jpg
+image: /uploads/3step_routine.png
 draft: false
 ---
 Skincare doesn't need to be complicated to work. Dermatologists have long pointed to a simple three-step routine — cleanser, moisturizer, sunscreen — as the foundation that does most of the actual work, with everything else (serums, treatments, exfoliants) being additions for specific concerns, not requirements.

@@ -4,9 +4,7 @@ description: What actually repairs damaged hair vs. what just coats it — and
   three real options worth considering.
 category: hair-care
 publishDate: 2026-09-03
-image: /uploads/Download premium psd _ image of Black shampoo bottle mockup
-  design by Chanikarn Thongsupa about mockup shampoo bottle, shampoo, shampoo
-  bottle, shampoo mockup, and cosmetic mockup 2377381.jpg
+image: /uploads/dry_damaged_hair.png
 draft: false
 ---
 Dry, damaged hair — from heat styling, coloring, or just environmental exposure — needs a different approach than oily scalp does. The goal here isn't clarifying or controlling oil; it's replacing lost moisture and rebuilding what's structurally weakened in the hair shaft.

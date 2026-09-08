@@ -4,7 +4,7 @@ description: Why rotating your actives instead of using everything daily might
   be the single best change you can make to your skincare routine.
 category: skin-care
 publishDate: 2026-09-08
-image: /uploads/1118722363694940050.jpg
+image: /uploads/skin_cycling.png
 draft: false
 ---
 For years, skincare culture pushed "more is better" — layering retinol, acids, and vitamin C into the same routine every single day. Skin cycling exists because that approach was quietly damaging people's skin barriers faster than it was improving anything. The method is simple: rotate your strongest actives across a few nights instead of using them all at once, giving skin time to actually recover between treatments.

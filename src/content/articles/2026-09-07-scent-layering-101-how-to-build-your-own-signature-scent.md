@@ -4,7 +4,7 @@ description: Why the same perfume smells different on everyone — and how
   layering body wash, lotion, and oil makes any fragrance last all day.
 category: body-care
 publishDate: 2026-09-07
-image: /uploads/_Signature Scents Collection.jpg
+image: /uploads/scent_layering.png
 draft: false
 ---
 Perfume alone rarely lasts as long as you'd like — it evaporates off skin within a few hours. Scent layering fixes this by building fragrance into every step of your routine instead of relying on one spray to do all the work, and it's become one of the most searched personal care trends heading into this year for exactly that reason.

@@ -5,7 +5,7 @@ const articles = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    category: z.enum(['hair-care', 'skin-care', 'body-care', 'reviews', 'comparisons', 'Bio-Somatic Wellness', 'Bio-Synthetic Beauty']),
+    category: z.enum(['hair-care', 'skin-care', 'body-care', 'reviews', 'comparisons']),
     publishDate: z.date(),
     image: z.string().optional(),
     draft: z.boolean().default(false)

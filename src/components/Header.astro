@@ -40,25 +40,27 @@ const nav = [
     position: sticky;
     top: 0;
     z-index: 20;
+    transition: background 0.3s ease;
   }
   .header-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
   .logo {
     font-family: var(--serif);
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 600;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.05em;
     text-decoration: none;
     color: var(--ink);
+    text-transform: uppercase;
   }
   nav ul {
     display: flex;
-    gap: 28px;
+    gap: 32px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -66,10 +68,13 @@ const nav = [
   nav a {
     text-decoration: none;
     color: var(--ink-soft);
-    font-size: 0.95rem;
-    font-weight: 500;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: color 0.2s ease;
   }
-  nav a:hover { color: var(--sage-deep); }
+  nav a:hover { color: var(--gold); }
 
   .nav-toggle {
     display: none;

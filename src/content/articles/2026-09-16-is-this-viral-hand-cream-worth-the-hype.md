@@ -5,6 +5,7 @@ description: L'Occitane's Shea Butter Hand Cream has been around for 30+ years
   holds up
 category: reviews
 publishDate: 2026-09-16
+image: /uploads/hand_cream_review.png
 draft: false
 ---
 L'Occitane's Shea Butter Hand Cream isn't a new product chasing a trend — it's been around for over 30 years, recognizable by its iconic aluminum tube. What's new is the TikTok attention, largely driven by oddly satisfying "ASMR squeeze" videos showing off its rich texture. The real question worth answering: is that attention actually deserved, or just algorithm luck?

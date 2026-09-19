@@ -5,6 +5,7 @@ description: "\"Bond-building\" gets used loosely in marketing — here's what t
   same way."
 category: hair-care
 publishDate: 2026-09-17
+image: /uploads/bond_repair.png
 draft: false
 ---
 "Bond-building" has become one of the most-used phrases in haircare marketing, largely thanks to Olaplex's rise since 2014. But the term gets applied loosely — not every product calling itself a bond treatment is doing the same thing chemically, and that distinction matters for whether you're getting targeted bond repair or a good conditioning treatment with different branding.

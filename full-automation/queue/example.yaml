@@ -1,0 +1,20 @@
+# This is an EXAMPLE. To publish a real article:
+# 1. Copy this file to a new name, e.g. queue/2026-10-01-new-article.yaml
+# 2. Fill in your real product info and links below
+# 3. Delete this example file or leave it (it won't run unless it's the only/newest one)
+# 4. Commit and push to GitHub - the automation picks it up automatically
+
+title_hint: "Best Ceramide Moisturizers for Barrier Repair"
+category: skin-care
+context: |
+  Article should explain what ceramides are, why the skin barrier matters,
+  and who actually needs a ceramide-focused moisturizer vs a regular one.
+
+products:
+  - name: "CeraVe Moisturising Cream"
+    info: "Contains Ceramides 1, 3, 6-II, hyaluronic acid, MVE delivery technology, fragrance-free, developed with dermatologists"
+    link: "https://link.amazon/PASTE_YOUR_LINK_HERE"
+
+  - name: "Some Other Product"
+    info: "Paste the key ingredients and any claims from the product listing here"
+    link: "https://link.amazon/PASTE_YOUR_LINK_HERE"

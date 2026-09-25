@@ -5,6 +5,7 @@ description: Frizz happens when your hair's cuticle lifts and absorbs moisture
   well-matched options
 category: hair-care
 publishDate: 2026-09-24
+image: /uploads/frizz_control_serums_humid_weather_cover.png
 draft: false
 ---
 Frizz isn't random — it's a specific, well-understood mechanism. Your hair's outer layer, the cuticle, is made of overlapping scales that lie flat when hair is smooth. In humid air, those scales lift, letting moisture into the hair's inner core. The core swells unevenly, disrupting the smooth surface that normally reflects light cleanly — that disruption is what you see as frizz.

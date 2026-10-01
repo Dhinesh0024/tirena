@@ -1,12 +1,12 @@
 ---
-title: "A Simple 3-Step Skincare Routine: Cleanser, Moisturizer, Sunscreen"
-description: You don't need 10 products. Here's why cleanser, moisturizer, and
-  sunscreen cover most of what your skin actually needs — and how to pick each
-  one.
+title: 'A Simple 3-Step Skincare Routine: Cleanser, Moisturizer, Sunscreen'
+description: You don't need 10 products. Here's why cleanser, moisturizer, and sunscreen cover most of what your skin actually needs — and how to pick each one.
 category: skin-care
 publishDate: 2026-09-03
+image: /uploads/simple_three_step_skincare_routine_cover.png
 draft: false
 ---
+
 Skincare doesn't need to be complicated to work. Dermatologists have long pointed to a simple three-step routine — cleanser, moisturizer, sunscreen — as the foundation that does most of the actual work, with everything else (serums, treatments, exfoliants) being additions for specific concerns, not requirements.
 
 ### Why just these three

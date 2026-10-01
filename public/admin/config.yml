@@ -1,0 +1,27 @@
+backend:
+  name: github
+  repo: Dhinesh0024/tirena
+  branch: main
+
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: articles
+    label: Articles
+    folder: src/content/articles
+    create: true
+    extension: md
+    format: yaml-frontmatter
+    summary: "{{title}} · {{category}}"
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description (shows on cards and in search), widget: text }
+      - name: category
+        label: Category
+        widget: select
+        options: [hair-care, skin-care, body-care, reviews, comparisons]
+      - { name: publishDate, label: Publish Date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
+      - { name: image, label: Featured Image, widget: image, required: false }
+      - { name: draft, label: Draft (hide from live site), widget: boolean, default: false }
+      - { name: body, label: Body, widget: markdown }
